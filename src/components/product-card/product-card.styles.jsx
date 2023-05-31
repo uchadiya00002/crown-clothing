@@ -10,17 +10,36 @@ export const ProductCartContainer = styled.div`
 
   img {
     width: 100%;
-    height: 95%;
+    height: 85%;
+
     object-fit: cover;
     margin-bottom: 5px;
+    
+  @media screen and (min-width: 550px) {
+    height: 85%; // Medium screens: 2 columns
+  }
+
+  @media screen and (min-width: 900px) {
+    height: 95%; // Large screens: 4 columns
+  }
   }
 
   button {
     width: 80%;
     opacity: 0.7;
     position: absolute;
-    top: 255px;
+    top: 235px;
+
     display: none;
+    @media screen and (min-width: 550px) {
+      
+      top: 235px;
+
+    }
+  
+    @media screen and (min-width: 900px) {
+      top: 255px;
+    }
   }
 
   &:hover {
